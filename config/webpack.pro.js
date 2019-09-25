@@ -17,7 +17,7 @@ module.exports={
     new HtmlWebpackPlugin({
       template: './news.html',
       filename: 'news.html',
-      chunks: ['news']
+      chunks: ['index', 'news']
     })
   ]
 };

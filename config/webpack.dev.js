@@ -15,7 +15,7 @@ module.exports={
     new HtmlWebpackPlugin({
       template: './news.html',
       filename: 'news.html',
-      chunks: ['news']          //  对应entry对象的key
+      chunks: ['index', 'news']        //  对应entry对象的key
     })
   ]
 };
