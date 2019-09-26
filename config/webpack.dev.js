@@ -1,21 +1,21 @@
-const HtmlWebpackPlugin=require('html-webpack-plugin');
+const webpack = require("webpack");
 
-module.exports={
-  mode: 'development',
-  output: {
-    filename: '[name].js'
-  },
-  devtool: 'source-map',
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      filename: 'index.html',
-      chunks: ['index']
-    }),
-    new HtmlWebpackPlugin({
-      template: './news.html',
-      filename: 'news.html',
-      chunks: ['index', 'news']        //  对应entry对象的key
-    })
-  ]
+const devConfig = {
+  mode: "development",
+  devtool: "cheap-module-eval-source-map",
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+  devServer: {
+    contentBase: "./dist",
+    open: true,
+    port: "8081",
+    hot: true,
+    hotOnly: true,
+    proxy: {
+      "/api": {
+        target: "http://localhost:4000"
+      }
+    }
+  }
 };
+
+module.exports = devConfig;

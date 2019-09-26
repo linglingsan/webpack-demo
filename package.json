@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env.development --open",
-    "build": "webpack --env.production"
+    "start": "webpack-dev-server --env.development --config ./config/webpack.common.js --open",
+    "build": "webpack --env.production --config ./config/webpack.common.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.37.0",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.2"
   }
 }
