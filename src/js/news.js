@@ -1,5 +1,5 @@
-import Test from './test'
-class News extends Test{
+import Index from '.'
+class News extends Index{
     constructor() {
         super()
         this.name = "张三"

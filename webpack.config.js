@@ -6,8 +6,10 @@ module.exports = function (env, argv) {
 
     return {
         entry: {
-            index: './js/index',
-            news: './js/news'
+            polyfill: './src/js/polyfill',
+            index: './src/js/index',
+            news: './src/js/news',
+
         },
         module: {
             rules: [

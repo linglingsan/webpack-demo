@@ -7,5 +7,3 @@ require('core-js/features/array/for-each')
 require('core-js/features/array/index-of')
 require('core-js/features/promise')
 
-console.log(222333);
-
