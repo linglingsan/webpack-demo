@@ -1,7 +1,9 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const prodConfig = {
   mode: "production",
-  devtool: "cheap-module-source-map"
+  plugins: [
+    new CleanWebpackPlugin(),
+  ]
 };
 
 module.exports = prodConfig;
-

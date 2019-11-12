@@ -1,7 +1,6 @@
-import Index from '.'
-class News extends Index{
+import '../css/news.css'
+class News {
     constructor() {
-        super()
         this.name = "张三"
     }
     read() {
@@ -12,7 +11,6 @@ class News extends Index{
 }
 
 const n = new News()
-n.test()
 n.read()
 
 

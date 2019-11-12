@@ -1,21 +1,20 @@
+
 const webpack = require("webpack");
 
 const devConfig = {
   mode: "development",
   devtool: "cheap-module-eval-source-map",
-  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./build",
+    index: 'index.html',
     open: true,
-    port: "8081",
-    hot: true,
-    hotOnly: true,
+    port: 4000,
     proxy: {
-      "/api": {
-        target: "http://localhost:4000"
-      }
+      '/user-center': 'http://192.168.123.157:5555',
+      '/template': 'http://192.168.123.157:5555',
+      '/register': 'http://192.168.123.157:5555'
     }
   }
-};
+}
 
 module.exports = devConfig;
